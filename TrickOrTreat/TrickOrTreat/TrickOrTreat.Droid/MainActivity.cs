@@ -6,30 +6,28 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Systems;
 
 namespace TrickOrTreat.Droid
 {
-	[Activity (Label = "TrickOrTreat.Droid", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "Halloween", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
-		int count = 1;
-
 		protected override void OnCreate (Bundle bundle)
 		{
-			base.OnCreate (bundle);
+			base.OnCreate(bundle);
+			SetContentView(Resource.Layout.Main);
 
-			// Set our view from the "main" layout resource
-			SetContentView (Resource.Layout.Main);
+			// Add event handler to button
+			var button = FindViewById<Button>(Resource.Id.myButton);
+			button.Click += Button_Click;			
+		}
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button> (Resource.Id.myButton);
-			
-			button.Click += delegate {
-				button.Text = string.Format ("{0} clicks!", count++);
-			};
+		void Button_Click (object sender, EventArgs e)
+		{
+			// Navigate to result page
+			var intent = new Intent(this, typeof(ResultActivity));
+			StartActivity(intent);
 		}
 	}
 }
-
-
