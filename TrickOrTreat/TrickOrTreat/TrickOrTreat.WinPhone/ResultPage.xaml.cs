@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using TrickOrTreat;
+using Windows.UI.Xaml.Media.Imaging;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -36,7 +37,13 @@ namespace TrickOrTreat.WinPhone
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             bool isTreat = TrickOrTreat.Random.IsTreat();
-            tricktreattext.Text = TrickOrTreat.Random.TrickTreatText(isTreat); 
+            tricktreattext.Text = TrickOrTreat.Random.TrickTreatText(isTreat);
+            BitmapImage img;
+            if (isTreat)
+                img = new BitmapImage { UriSource = new Uri("ms-appx:///Assets/halloween/treatBackground.jpg") };
+            else
+                img = new BitmapImage { UriSource = new Uri("ms-appx:///Assets/halloween/trickBackground.jpg") };
+            backgroundimg.ImageSource = img;
         }
     }
 }

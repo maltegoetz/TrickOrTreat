@@ -9,6 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/halloween/background.jpg"/>
+        </Grid.Background>
+
         <Button Content="Trick or treat?" HorizontalAlignment="Center" Click="Button_Click" />
     </Grid>
 </Page>

@@ -9,6 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-       <TextBlock x:Name="tricktreattext"/> 
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/halloween/background.jpg"
+                    Stretch="UniformToFill" x:Name="backgroundimg" />
+        </Grid.Background>
+        <TextBlock x:Name="tricktreattext" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="40"/> 
     </Grid>
 </Page>
