@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>5c73d1f7-63a8-4566-8246-fe8750b48c5f</ProjectGuid>
+    <ProjectGuid>{5C73D1F7-63A8-4566-8246-FE8750B48C5F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>TrickOrTreat.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
@@ -69,6 +69,7 @@
   <ItemGroup>
     <ProjectReference Include="..\TrickOrTreat\TrickOrTreat.csproj">
       <Name>TrickOrTreat</Name>
+      <Project>{3154A742-23B0-42EC-817E-C39DBF673870}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
