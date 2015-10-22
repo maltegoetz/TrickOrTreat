@@ -22,13 +22,18 @@ namespace TrickOrTreat.Droid
 			SetContentView(Resource.Layout.Result);
 			ActionBar.SetDisplayHomeAsUpEnabled(true);
 
+			var isTreat = TrickOrTreat.Random.IsTreat();
+
 			// Set result text
 			var textView = FindViewById<TextView>(Resource.Id.tvResult);
-			textView.Text = "Trick!";
+			textView.Text = TrickOrTreat.Random.TrickTreatText(isTreat);
 
 			// Set result background image
 			var imageView = FindViewById<ImageView>(Resource.Id.ivBackground);
-			imageView.SetImageResource(Resource.Drawable.trickBackground);
+			if (isTreat)
+				imageView.SetImageResource(Resource.Drawable.treatBackground);
+			else
+				imageView.SetImageResource(Resource.Drawable.trickBackground);
 		}
 	}
 }
