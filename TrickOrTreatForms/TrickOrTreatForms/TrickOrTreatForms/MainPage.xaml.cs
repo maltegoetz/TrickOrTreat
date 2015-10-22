@@ -13,6 +13,12 @@ namespace TrickOrTreatForms
         public MainPage()
         {
             InitializeComponent();
+			Title = "Halloween";
         }
+
+		public async void Random_Clicked(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new ResultPage());
+		}
     }
 }
