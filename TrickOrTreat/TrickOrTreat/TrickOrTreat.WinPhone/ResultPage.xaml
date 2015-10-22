@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="TrickOrTreat.WinPhone.MainPage"
+    x:Class="TrickOrTreat.WinPhone.ResultPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:TrickOrTreat.WinPhone"
@@ -9,6 +9,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button Content="Trick or treat?" HorizontalAlignment="Center" Click="Button_Click" />
+       <TextBlock x:Name="tricktreattext"/> 
     </Grid>
 </Page>
