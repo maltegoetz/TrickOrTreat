@@ -2,8 +2,8 @@
 
 namespace TrickOrTreatForms
 {
-	public interface ISpeechSynth
-	{
-		void SpeakText(string text);
-	}
+    public interface ISpeechSynth
+    {
+    	void SpeakText(string text);
+    }
 }

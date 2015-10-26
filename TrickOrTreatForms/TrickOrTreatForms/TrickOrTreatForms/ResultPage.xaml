@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TrickOrTreatForms.ResultPage">
-    <Grid>
-    	<Image x:Name="imgBackground" Source="trickBackground.jpg" Aspect="AspectFill"/>
-    	<Label x:Name="lblResult" Text="Trick!" VerticalOptions="Center" HorizontalOptions="Center" />
-    </Grid>  	
+	<Grid>
+		<Image x:Name="imgBackground" Source="trickBackground.jpg" Aspect="AspectFill"/>
+		<Label x:Name="lblResult" Text="Trick!" VerticalOptions="Center" HorizontalOptions="Center" />
+	</Grid>  	
 </ContentPage>
